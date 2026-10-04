@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fasih Syed — Web Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#16292f;--fg:#e9f0ef;--mute:#a6bcbb;--line:#2f4b52;--acc:#7fd1c0;--accfg:#0f1f23;--panel:#1e373e;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;padding:28px 0;font-weight:500}
+nav a{text-decoration:none;margin-left:22px}
+nav a:first-child{margin:0}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0;line-height:1}
+h1{font-weight:800;font-size:clamp(3.6rem,15vw,10.5rem);letter-spacing:-.045em;margin-top:6vh}
+.lede{font-size:clamp(1.2rem,2.6vw,1.6rem);max-width:30ch;margin:28px 0 36px;line-height:1.35}
+.btn{display:inline-block;background:var(--acc);color:var(--accfg);padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500}
+.btn.ghost{background:none;color:var(--fg);border:1.5px solid var(--fg);margin-left:10px}
+.demo{margin:64px 0 0;background:var(--panel);border:1.5px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:14px;max-width:640px}
+.demo .p{color:var(--mute);font-size:.95rem}
+.demo .q{font-weight:500;min-height:1.6em}
+.demo .r{border-left:3px solid var(--acc);padding-left:14px;color:var(--mute);min-height:3.2em}
+section{padding:110px 0 0}
+h2{font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;margin-bottom:34px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px 40px;padding:26px 0;border-top:1.5px solid var(--line)}
+.row h3{font-size:1.5rem;letter-spacing:-.02em}
+.row p{margin:0;color:var(--mute);max-width:56ch}
+.row small{display:block;margin-top:8px;color:var(--fg);font-weight:500}
+.stack{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.stack li{border:1.5px solid var(--line);border-radius:999px;padding:6px 16px;background:var(--panel)}
+.contact{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.15rem,5.2vw,3rem);letter-spacing:-.03em;overflow-wrap:anywhere}
+footer{padding:90px 0 40px;color:var(--mute);font-size:.95rem}
+h1{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.5,1),letter-spacing .35s}
+h2{display:inline-block;transition:transform .3s cubic-bezier(.3,1.6,.5,1),color .2s}
+h2:hover{transform:translateX(12px);color:var(--acc)}
+.row{transition:padding-left .3s ease,background .3s ease}
+.row h3{transition:transform .3s cubic-bezier(.3,1.6,.5,1),color .2s}
+.row:hover{padding-left:16px}.row:hover h3{transform:translateX(6px);color:var(--acc)}
+.btn{transition:transform .25s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
+.btn:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 10px 0 -2px var(--line)}
+.stack li{transition:transform .25s cubic-bezier(.3,1.6,.5,1),background .2s,color .2s,border-color .2s}
+.stack li:hover{transform:translateY(-5px) rotate(-3deg);background:var(--acc);color:var(--accfg);border-color:var(--acc)}
+.stackhead{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.3rem;margin:26px 0 12px;letter-spacing:-.02em}
+.contact{display:inline-block;text-decoration:none;background:linear-gradient(var(--acc),var(--acc)) 0 100%/0 .08em no-repeat;transition:background-size .4s,transform .3s cubic-bezier(.3,1.6,.5,1)}
+.contact:hover{background-size:100% .08em;transform:translateX(8px)}
+nav a{transition:color .2s,transform .2s;display:inline-block}nav a:hover{color:var(--acc);transform:translateY(-2px)}
+.gh{margin-top:22px;display:flex;gap:18px;flex-wrap:wrap;font-weight:500}
+@media(max-width:640px){.row{grid-template-columns:1fr}.btn.ghost{margin:10px 0 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+.ch{opacity:0;display:inline-block;white-space:pre}.ch.on{opacity:1}
+.caret{display:inline-block;width:.07em;height:.8em;background:var(--acc);margin-left:.06em;vertical-align:baseline;animation:bl .8s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.logo{display:inline-flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.02em}
+.mark{background:var(--acc);color:var(--accfg);border-radius:10px;padding:6px 10px;font-size:1rem;line-height:1;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.logo:hover .mark{transform:rotate(-8deg) scale(1.08)}
+@media(max-width:560px){.wm{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#top" aria-label="Fasih Syed, home"><span class="mark">&lsaquo;FS&rsaquo;</span><span class="wm">Fasih Syed</span></a><span><a href="#work">Work</a><a href="#services">Services</a><a href="https://github.com/Fasih-Syed" target="_blank" rel="noopener">GitHub</a><a href="#contact">Contact</a></span></nav>
+
+<header id="top">
+<h1 id="name" aria-label="Fasih Syed">Fasih Syed</h1>
+<p class="lede">Full-stack developer. I build web apps end to end and wire AI into them.</p>
+<a class="btn" href="#contact">Start a project</a><a class="btn ghost" href="#work">See my work</a>
+
+<div class="demo" aria-live="polite">
+<div class="p">What an AI feature looks like in an app I build:</div>
+<div class="q" id="q"></div>
+<div class="r" id="r"></div>
+</div>
+</header>
+
+<section id="services">
+<h2>What I build</h2>
+<div class="row"><h3>Websites</h3><p>Sites that load fast, read well on a phone, and put your main action in front of visitors within seconds. Built so you can change the content without calling me.</p></div>
+<div class="row"><h3>Full-stack apps</h3><p>React front ends on Node and Express back ends, with MongoDB behind them. Logins, dashboards, payments and admin panels, shipped as working software rather than mockups.</p></div>
+<div class="row"><h3>AI features</h3><p>Chatbots that answer from your own documents, tools that summarise or draft, and automations that take repetitive work off your team. I connect the models to your data and keep costs predictable.</p></div>
+</section>
+
+<section id="work">
+<h2>Projects</h2>
+<div class="row"><h3>Coming soon</h3><p>I'm adding case studies here. The code is already on GitHub.<span class="gh"><a href="https://github.com/Fasih-Syed" target="_blank" rel="noopener">github.com/Fasih-Syed</a></span></p></div>
+</section>
+
+<section>
+<h2>Tech stack</h2>
+<div class="stackhead">Core</div>
+<ul class="stack"><li>Python</li><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li></ul>
+<div class="stackhead">AI</div>
+<ul class="stack"><li>OpenAI &amp; Claude APIs</li><li>RAG</li><li>LangChain</li><li>Vector search</li><li>Prompt engineering</li><li>Python AI scripts</li></ul>
+</section>
+
+<section id="contact">
+<h2>Let's work together</h2>
+<a class="contact" href="mailto:fasihuddinsyed777@gmail.com">fasihuddinsyed777@gmail.com</a>
+<div class="gh"><a href="https://github.com/Fasih-Syed" target="_blank" rel="noopener">GitHub</a></div>
+<footer>© 2026 Fasih Syed</footer>
+</section>
+</div>
+
+<script>
+(function(){
+var h=document.getElementById("name"),t=h.textContent,busy=false;
+if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+h.innerHTML="";
+var sp=t.split("").map(function(c){var e=document.createElement("span");e.className="ch";e.setAttribute("aria-hidden","true");e.textContent=c;h.appendChild(e);return e});
+var caret=document.createElement("span");caret.className="caret";caret.setAttribute("aria-hidden","true");h.appendChild(caret);
+function run(){if(busy)return;busy=true;caret.style.visibility="visible";sp.forEach(function(e){e.className="ch"});
+var i=0;(function n(){if(i<sp.length){sp[i++].className="ch on";setTimeout(n,28+Math.random()*22)}else setTimeout(function(){caret.style.visibility="hidden";busy=false},900)})();}
+run();h.addEventListener("mouseenter",run);h.addEventListener("touchstart",run,{passive:true});
+})();
+(function(){
+var qs=[["Which invoices are overdue this month?","Seven invoices are overdue, totalling $4,820. The oldest is 18 days late."],
+["Summarise this contract in three lines.","Twelve-month term, auto-renews unless cancelled 30 days prior, payment due in 14 days."],
+["Draft a reply to this customer.","Hi Sam, thanks for flagging this. I've reissued your order and it ships tomorrow."]];
+var q=document.getElementById("q"),r=document.getElementById("r");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){q.textContent=qs[0][0];r.textContent=qs[0][1];return}
+var i=0;
+function type(el,t,cb){var n=0;(function s(){el.textContent=t.slice(0,++n);if(n<t.length)setTimeout(s,22);else cb&&setTimeout(cb,900)})()}
+function loop(){q.textContent="";r.textContent="";type(q,qs[i][0],function(){type(r,qs[i][1],function(){setTimeout(function(){i=(i+1)%qs.length;loop()},2200)})})}
+loop();
+})();
+</script>
+</body>
+</html>
